@@ -1,28 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     display: grid;
     height: 100vh;
     place-items: center;
-    background: linear-gradient(to right,#abdfc1 0%,#1ba1f2 100%);
+    background: linear-gradient(to right, #abdfc1 0%, #1ba1f2 100%);
 }
 
 
-.container{
-   background: #fff;
-   max-width: 350px;
-   width: 100%;
-   padding: 25px 30px;
-   border-radius: 5px; 
-   position: relative;
+.container {
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
 }
 
-.container .logo img{
+.container .logo img {
     position: absolute;
     width: 90px;
     height: 90px;
@@ -32,14 +32,15 @@ body{
     border: 5px solid #f74;
 }
 
-.container form .title{
+.container form .title {
     font-size: 30px;
     font-weight: 600;
     margin: 20px 0 10px 0;
 
 
 }
-.container form .title::before{
+
+.container form .title::before {
     content: '';
     position: absolute;
     height: 4px;
@@ -47,9 +48,9 @@ body{
     bottom: 2px;
     left: 0;
     border-radius: 5px;
-    background: #1da1f2;    
+    background: #1da1f2;
 }
- 
+
 .container form .input-box {
     width: 100%;
     height: 45px;
@@ -65,14 +66,14 @@ body{
     border: none;
 }
 
-.container form .underline::before{
+.container form .underline::before {
     position: absolute;
     content: '';
     height: 2px;
     width: 100%;
     background: #ccc;
     left: 0;
-    bottom:0;
+    bottom: 0;
 }
 
 .container form .underline:after {
@@ -89,7 +90,80 @@ body{
 }
 
 .container form .input-box input:focus~.underline:after,
-.container form .input-box input{
+.container form .input-box input:valid~.underline:after {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+.container form .button {
+    margin: 40px 0 20px 0;
+    padding: 0%;
+
+}
+
+.container form .input-box input[type="submit"] {
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #1ba1f2;
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover {
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    color: rgba(94, 67, 204, 0.56);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+.container .text {
+    font: size 3014px;
+    text-align: center;
+}
+.container .github a,
+.container .twitter a,
+.container .facebook a{
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 45px;
+    border-radius: 5px;
+}
+
+.container .github a{
+    background-color: #24292e;
+    margin: 20px 0 15px 0;
+}
+
+.container .github a:hover{
+    background-color: #6d7e8f;
+}
+.container .twitter a{
+    background-color: #f74;
+    margin:20px 0 15px 0 ;
+}
+.container .twitter a:hover{
+    background-color: rgb(186, 88, 53);
+}
+
+.container .facebook a{
+    background-color: darkmagenta;
+    margin: 20px 0 15px 0;
+}
+.container .facebook a:hover{
+    background-color: rgb(62, 46, 62);
+}
+.container .github i,
+.container .twitter i,
+.container .facebook i{
+    font-size: 25px;
+    padding-right:25px;
+}
+
